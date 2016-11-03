@@ -1,47 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Signature Pieces</title>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'> 
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
-  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js'></script>
-</head>
-<body ng-app="signaturePieces">
-  <div class="centerAlign">
-    <div hello-friend></div>
-  </div>
-	<canvas	id="clear" width="600" height="350"></canvas>
-	<div class="controls">
-		<ul>
-			<li class="red"></li>
-			<li class="blue"></li>
-			<li class="yellow"></li>
-		</ul>
-		<button id="revealColorSelect">Create Color</button>
-		<div id="colorSelect">
-			<span id="newColor"></span>
-			<div class="sliders">
-				<p>
-					<label for="red"><span class="red1">Red</span></label>
-					<input id="red" name="red" type="range" min=0 max=255 value=0>
-				</p>
-				<p>
-					<label for="green"><span class="green4">Green</span></label>
-					<input id="green" name="green" type="range" min=0 max=255 value=0>
-				</p>
-				<p>
-					<label for="blue"><span class="blue2">Blue</span></label>
-					<input id="blue" name="blue" type="range" min=0 max=255 value=0>
-				</p>
-			</div>
-			<button id="addNewColor">Add Color</button>
-		</div>
-    <button id="clearCanvas">Clear Canvas</button>
-    <button id="removeSelected">Remove Color</button>
-    <button id="randomFact">Random</button>
-	</div>
-  <script src='http://code.jquery.com/jquery-1.11.0.min.js' charset='utf-8'></script>
-  <script src="javascript/app.js"></script>
-  <script src="javascript/directives/scripts.js"></script>
-</body>
+<html lang='en'>
+  <head>
+  	<title>Signature Pieces</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  	<link rel='stylesheet' href='css/style.css' type='text/css' media='screen' title='no title' charset='utf-8'>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js'></script>
+  </head>
+  <body ng-app='signaturePieces'>
+    <div class='centerAlign'>
+      <div hello-friend></div>
+    </div>
+  	<canvas	id='clear' width='600' height='350'></canvas>
+    <div class='ctrlBrushes'>
+      <label for='brushSize'>Brush Size</label>
+      <input id ='brushSize' type='range' min=1 max=200 value=0>
+    </div>
+  	<div class='controls'>
+  		<ul>
+  			<li class='red selected'></li>
+  			<li class='blue'></li>
+  			<li class='yellow'></li>
+  		</ul>
+  		<button id='revealColorSelect'>Create Color</button>
+  		<div id='colorSelect'>
+  			<span id='newColor'></span>
+  			<div class='sliders'>
+  				<p>
+  					<label for='red'><span class='red1'>Red</span></label>
+  					<input id='red' name='red' type='range' min=0 max=255 value=0>
+  				</p>
+  				<p>
+  					<label for='green'><span class='green4'>Green</span></label>
+  					<input id='green' name='green' type='range' min=0 max=255 value=0>
+  				</p>
+  				<p>
+  					<label for='blue'><span class='blue2'>Blue</span></label>
+  					<input id='blue' name='blue' type='range' min=0 max=255 value=0>
+  				</p>
+  			</div>
+  			<button id='addNewColor'>Add Color</button>
+  		</div>
+      <button id='clearCanvas'>Clear Canvas</button>
+      <button id='removeSelected'>Remove Color</button>
+      <button id='randomFact'>Random</button>
+  	</div>
+    <script src='http://code.jquery.com/jquery-1.11.0.min.js' charset='utf-8'></script>
+    <script src='javascript/app.js'></script>
+    <script src='javascript/directives/scripts.js'></script>
+  </body>
 </html> 
