@@ -85,6 +85,7 @@ ul li {
 	width: 40px;
 	height: 40px;
 }
+
 button {
 	background: #4fa3fc;
 	box-shadow: 0 3px 0 0 #6A845F;
@@ -150,6 +151,7 @@ button {
 	position: relative;
 	display:none;
 }
+
 #colorSelect:after {
 	bottom: 100%;
 	left: 50%;
@@ -173,12 +175,13 @@ button {
 	float: left;
 	border: none;
 	margin: 10px 20px 20px 10px;
-
 }
+
 .sliders p {
 	margin: 8px 0;
 	vertical-align: middle;
 }
+
 .sliders label {
 	display: inline-block;
 	margin: 0 10px 0 0;
@@ -189,8 +192,9 @@ button {
 .sliders input {
 	position: relative;
 	top: 2px;
-
+  cursor: pointer;
 }
+
 #colorSelect button {
 	border: none;
 	border-top: 1px solid #6A845F;
@@ -199,4 +203,28 @@ button {
 	margin: 10px -10px -7px;
 	padding: 5px 10px;
 	width: 325px;
+}
+
+/* Brush */
+.ctrlBrushes {
+  min-height: 60px;
+  width: 300px;
+  border-radius: 5px;
+  padding: 5px;
+  background: #4fa3fc;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 3px 0 0 #6A845F;
+  text-shadow: 0 1px #6A845F;
+  display: block;
+  line-height: 30px;
+  color: #fff;
+  margin: 40px auto 20px auto;
+}
+
+#brushSize {
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
 }
