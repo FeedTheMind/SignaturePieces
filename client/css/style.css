@@ -6,9 +6,9 @@ body {
 .centerAlign {
   color: #fff;
   text-align: center;
-  width: 360px;
   margin: 15px auto;
-  font-size: 225%;
+  font-size: 200%;
+  font-weight: bold;
 }
 .red1 {
     color: #fc4c4f;
@@ -43,14 +43,14 @@ canvas {
 .controls {
 	min-height: 60px;
 	margin: 0 auto;
-	width: 600px;
 	border-radius: 5px;
 	overflow: hidden;
+  width: 350px;
 }
 
 ul {
 	list-style:none;
-	margin: 0;
+	margin: 0 auto;
 	float: 	left;
 	padding: 10px 0 20px;
 	width: 100%;
@@ -62,10 +62,9 @@ ul li {
 	width: 54px;
 	border-radius: 60px;
 	cursor: pointer;
-	border: 0;
 	box-shadow: 0 3px 0 0 #222;
   display: inline-block;
-  margin: 0 5px 10px;
+  margin: 0 5px 5px;
 }
 
 .red {
@@ -99,36 +98,15 @@ button {
   font-weight: bold;
 }
 
-#revealColorSelect {
+#revealColorSelect, 
+#clearCanvas,
+#removeSelected,
+#randomFact {
 	border: none;
 	border-radius: 5px;
 	margin: 10px auto;
 	padding: 5px 20px;
 	width: 160px;
-}
-
-#clearCanvas {
-  border: none;
-  border-radius: 5px;
-  margin: 10px auto;
-  padding: 5px 20px;
-  width: 160px;
-}
-
-#removeSelected {
-  border: none;
-  border-radius: 5px;
-  margin: 10px auto;
-  padding: 5px 20px;
-  width: 160px;
-}
-
-#randomFact {
-  border: none;
-  border-radius: 5px;
-  margin: 10px auto;
-  padding: 5px 20px;
-  width: 160px;
 }
 
 #revealColorSelect:hover,
@@ -150,21 +128,6 @@ button {
 	width: 305px;
 	position: relative;
 	display:none;
-}
-
-#colorSelect:after {
-	bottom: 100%;
-	left: 50%;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-	border-color: rgba(255, 255, 255, 0);
-	border-bottom-color: #fff;
-	border-width: 10px;
-	margin-left: -10px;
 }
 
 #newColor {
@@ -227,4 +190,17 @@ button {
   display: block;
   margin: 0 auto;
   cursor: pointer;
+}
+
+/* Canvas Query */
+
+@media screen and (max-width: 630px) {
+  canvas {
+    width: 350px;
+    height: 300px; 
+  }
+
+  .centerAlign {
+    font-weight: normal;
+  }
 }
