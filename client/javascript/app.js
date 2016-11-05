@@ -89,7 +89,8 @@ document.getElementById('clearCanvas').addEventListener('click', function() {
 $removeColor.click(function() {
   $('.selected').remove();
   // Applies class to first element in unordered list
-  $('.controls ul li').first().addClass('selected');
+    // click() changes color to "selected" element
+  $('.controls ul li').first().addClass('selected').click();
 });
 
 // Alerts a random fact from the database
