@@ -25,6 +25,15 @@ $('#revealColorSelect').click(function(){
   $('#colorSelect').slideToggle(200);
 });
 
+// When "body" is clicked, 
+$('body').click(function(e) {
+  // and either expression is true,
+  if ($(e.target).is('.controls') || $(e.target).is('body')) {
+    // hide (slideUp) #colorSelect
+    $('#colorSelect').slideUp(200);
+  }
+});
+
 // Updates the new color span
 function changeColor() {
   var r = $('#red').val();
