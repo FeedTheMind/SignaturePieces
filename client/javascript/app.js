@@ -69,7 +69,14 @@ $canvas.mousedown(function(e){
     context.beginPath();
     context.moveTo(lastEvent.offsetX, lastEvent.offsetY);
     context.lineTo(e.offsetX, e.offsetY);
-    context.strokeStyle = color;
+    // If zero "colors" exist,
+    if ($('.controls ul li').length < 1) {
+      // change to a default (black)
+      context.strokeStyle = 'rgb(0, 0, 0)';
+    } else {
+      // else update accordingly
+      context.strokeStyle = color;
+    }
     context.stroke();
     
     lastEvent = e;
