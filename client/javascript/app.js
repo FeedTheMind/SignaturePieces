@@ -105,6 +105,8 @@ function generateNumber() {
   return Math.floor((Math.random() * 6));
 }
 
+// Update canvas ("Random") with drawing inspiration
+  // Eventually, have an image to "color"
 $newFact.click(function() {
   var ourIndex = generateNumber();  
   $.ajax({url: '/fact/' + ourIndex, success: function(result) {
