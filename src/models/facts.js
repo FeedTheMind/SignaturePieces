@@ -9,7 +9,8 @@ var factsSchema = new mongoose.Schema({
 var Fact = mongoose.model('Fact', factsSchema);
 
 var appreciation = new Fact;
-
+// Change the "facts" to drawing ideas
+  // Eventually, have images to "color"
 appreciation.facts = [
   'Brain research shows that art promotes creativity, social development, and self-worth.', 
   'April 15 is World Art Day, celebrated by the International Association of Art.', 
