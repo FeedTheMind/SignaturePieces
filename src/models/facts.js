@@ -23,3 +23,5 @@ appreciation.facts = [
 appreciation.save();
 
 module.exports = Fact;
+
+// Have new data each time connection established
