@@ -105,11 +105,16 @@ function generateNumber() {
   return Math.floor((Math.random() * 6));
 }
 
-// Update canvas ("Random") with drawing inspiration
+// Update canvas ("Random") with drawing inspiration (result)
   // Eventually, have an image to "color"
 $newFact.click(function() {
   var ourIndex = generateNumber();  
   $.ajax({url: '/fact/' + ourIndex, success: function(result) {
-   alert(result);
-  }})
+    context.clearRect(180, 0, 235, 60);
+    context.font = '2em Georgia';
+    context.textAlign = 'center';
+    context.strokeStyle = color;
+    context.lineWidth = 1.15;
+    context.strokeText(result, 300, 50);
+  }});
 });
